@@ -1,16 +1,17 @@
 
 body {
-   margin-top: 30px;
    font-family: "Dejavu Sans", "Bitstream Vera Sans", sans;
    font-size: 16px;
    color: #101010;
-}
 
-.main {
-   width: 70%;
-   float: right;
-   border: #c0c0e0 solid 1px;
+   margin-top: 30px;
+   margin-left: auto;
+   margin-right:auto;
+
+   max-width: 740px;
    padding: 30px;
+
+   border: #c0c0e0 solid 1px;
 }
 
 a {

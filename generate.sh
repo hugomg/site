@@ -26,7 +26,13 @@ cd "$pages_dir"
 find . -type f | while read file
 do
    file_dir=$(dirname "$file")
-   mkdir -p "$output_dir/$file_dir"
+   extension="${file##*.}"
    output_file="$output_dir/$file"
-   cat "$common_dir/header.html" $file "$common_dir/footer.html" > "$output_file"
+
+   mkdir -p "$output_dir/$file_dir"
+   if [ "$extension" = html ]; then
+      cat "$common_dir/header.html" $file "$common_dir/footer.html" > "$output_file"
+   else
+      cp "$file" "$output_file"
+   fi
 done
